@@ -11,3 +11,32 @@ Make sure you have the following installed:
 - Virtual environment (venv) setup
   
 - The necessary Python packages (listed in requirements.txt)
+
+
+**Installation**
+
+1. Clone this repository:
+
+```bash
+    git clone 
+    cd flask-explorer
+```
+
+
+2. Create and activate a virtual environment:
+
+```bash
+    python3 -m venv venv
+    source venv/bin/activate
+```
+
+3. Install the required packages:
+```bash
+    pip install -r requirements.txt
+```
+
+
+4. Run the application:
+```bash
+    flask run
+```
