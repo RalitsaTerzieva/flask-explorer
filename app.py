@@ -12,8 +12,15 @@ def info():
 
 @app.route('/puppy/<name>')
 def puppy(name):
-    return "<h1>This is a page for {}</h1>".format(name.upper())
+    return "<h1>This is {}</h1>".format(name[100])
+
+@app.route('/puppy_latin/<name>')
+def puppy_name(name):
+    if name[-1] != 'y':
+        return f"Hi, {name.capitalize()}! puppylatin name is {name.capitalize()}y"
+    else:
+        return f"Hi, {name.capitalize()}y! Your puppylatin name is {name[:-1].capitalize()}iful"
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
 
