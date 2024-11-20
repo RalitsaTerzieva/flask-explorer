@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Welcome to PuppyLand</h1>
+<h2>Here is a pic of a sweet puppy!</h2>
+<img src="../static/puppy_pic.jpg" alt="Puppy image"  width="600" height="500"/>
+
+<h2>All puppies:</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    {% for puppy in puppy_information %}
+    <div style="flex: 1 1 calc(50% - 10px); padding: 10px; box-sizing: border-box;">
+        <div>
+            <strong>Name:</strong> {{ puppy['name'] }} <br>
+            <strong>Age:</strong> {{ puppy['age'] }} <br>
+            <strong>Breed:</strong> {{ puppy['breed'] }} <br>
+        </div>
+        <img src="../static/{{ puppy['image'] }}" alt="Image" width="500" height="400" style="border-radius: 8px;"/>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

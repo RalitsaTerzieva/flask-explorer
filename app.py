@@ -4,8 +4,14 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    puppy_inforamtion = 'Bliss'
-    return render_template("base.html", puppy_name=puppy_inforamtion)
+    puppy_information = [
+        {'name': 'Bliss', 'age': 2, 'breed': 'Golden Retriever', 'image': 'golden.jpg'},
+        {'name': 'Max', 'age': 3, 'breed': 'Bulldog', 'image': 'bulldog.jpg'},
+        {'name': 'Bella', 'age': 1, 'breed': 'Beagle', 'image': 'beagle.jpg'},
+        {'name': 'Rocky', 'age': 4, 'breed': 'German Shepherd', 'image': 'germanshepherd.jpg'}
+    ]
+     
+    return render_template("home.html", puppy_information=puppy_information)
 
 @app.route('/information')
 def info():
@@ -13,7 +19,7 @@ def info():
 
 @app.route('/puppy/<name>')
 def puppy(name):
-    return "<h1>This is {}</h1>".format(name[100])
+    return render_template('puppy.html', name=name)
 
 @app.route('/puppy_latin/<name>')
 def puppy_name(name):
