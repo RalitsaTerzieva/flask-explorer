@@ -15,10 +15,10 @@
                 </div>
                 
                 <div class="flex flex-nowrap">
-                    <a href="#" class="hover:bg-blue-600 px-3 py-2 rounded-md">Home</a>
-                    <a href="#" class="hover:bg-blue-600 px-3 py-2 rounded-md">Information</a>
-                    <a href="#" class="hover:bg-blue-600 px-3 py-2 rounded-md">PuppyLat</a>
-                    <a href="#" class="hover:bg-blue-600 px-3 py-2 rounded-md">Puppy</a>
+                    <a href="{{ url_for('index') }}" class="hover:bg-blue-600 px-3 py-2 rounded-md">Home</a>
+                    <a href="{{ url_for('info') }}" class="hover:bg-blue-600 px-3 py-2 rounded-md">Information</a>
+                    <a href="{{ url_for('puppy', name='some_puppy_name') }}"class="hover:bg-blue-600 px-3 py-2 rounded-md">PuppyLat</a>
+                    <a href="{{ url_for('puppy_name', name='some_puppy_name') }}" class="hover:bg-blue-600 px-3 py-2 rounded-md">Puppy</a>
                 </div>
             </div>
         </nav>
