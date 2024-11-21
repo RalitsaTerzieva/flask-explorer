@@ -8,17 +8,22 @@
         <title>Puppy site</title>
     </head>
     <body>
-        <nav class="bg-yellow-500 text-white">
-            <div class="flex w-full">
-              <div class="flex flex-row h-16">
-                  <a href="#" class="text-lg font-bold">My App</a>
-                  <a href="#" class="hover:bg-blue-600 px-3 py-2 rounded-md">Home</a>
-                  <a href="#" class="hover:bg-blue-600 px-3 py-2 rounded-md">Information</a>
-                  <a href="#" class="hover:bg-blue-600 px-3 py-2 rounded-md">Puppy Latin</a>
-                  <a href="#" class="hover:bg-blue-600 px-3 py-2 rounded-md">Puppy</a>
-              </div>
+        <nav class="bg-yellow-500 text-white pl-2 ">
+            <div class="flex justify-between items-center w-full px-4">
+                <div class="ml-2 w-full flex-grow-2">
+                    <a href="#" class="text-lg font-bold">My App</a>
+                </div>
+                
+                <div class="flex flex-nowrap">
+                    <a href="#" class="hover:bg-blue-600 px-3 py-2 rounded-md">Home</a>
+                    <a href="#" class="hover:bg-blue-600 px-3 py-2 rounded-md">Information</a>
+                    <a href="#" class="hover:bg-blue-600 px-3 py-2 rounded-md">PuppyLat</a>
+                    <a href="#" class="hover:bg-blue-600 px-3 py-2 rounded-md">Puppy</a>
+                </div>
             </div>
-          </nav>
+        </nav>
+        
+        
         
         {% block content %}
         
