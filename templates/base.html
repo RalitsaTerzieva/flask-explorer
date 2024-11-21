@@ -2,26 +2,20 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link href="./output.css" rel="stylesheet">
+        <link href="{{ url_for('static', filename='src/output.css') }}" rel="stylesheet">
         <title>Puppy site</title>
     </head>
     <body>
-        <nav class="bg-blue-500 text-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-row">
-              <div class="flex flex-row justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex-shrink-0">
+        <nav class="bg-yellow-500 text-white">
+            <div class="flex w-full">
+              <div class="flex flex-row h-16">
                   <a href="#" class="text-lg font-bold">My App</a>
-                </div>
-                <!-- Menu Items -->
-                <div class="hidden md:flex space-x-4">
                   <a href="#" class="hover:bg-blue-600 px-3 py-2 rounded-md">Home</a>
                   <a href="#" class="hover:bg-blue-600 px-3 py-2 rounded-md">Information</a>
                   <a href="#" class="hover:bg-blue-600 px-3 py-2 rounded-md">Puppy Latin</a>
                   <a href="#" class="hover:bg-blue-600 px-3 py-2 rounded-md">Puppy</a>
-                </div>
               </div>
             </div>
           </nav>
