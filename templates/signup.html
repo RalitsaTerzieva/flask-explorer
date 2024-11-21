@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+    <h1>Welcome to the sign up page!</h1>
+    <p>Fill out the form.</p>
+
+    <form action="{{ url_for('thank_you') }}" class="flex flex-col bg-gray-200">
+        <div class="flex-row w-full">
+            <label for="first">First Name:</label>
+            <input type="text" name="first"/>
+
+            <label for="last">Last Name:</label>
+            <input type="text" name="last"/>
+        </div>
+
+        <input type="Submit" value="Submit Form" class="bg-pink-200 text-white max-w-3"/>
+    </form>
+</div>
+
+
+{% endblock %}

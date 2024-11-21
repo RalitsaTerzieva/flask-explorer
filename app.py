@@ -17,6 +17,16 @@ def index():
 def info():
     return "<h1>Puppies are cute!</h1>"
 
+@app.route('/signup_form')
+def signup_form():
+    return render_template("signup.html")
+
+@app.route('/thank-you')
+def thank_you():
+    first = request.args.get('first')
+    last = request.args.get('last')
+    return render_template("thankyou.html", first=first, last=last)
+
 @app.route('/puppy/<name>')
 def puppy(name):
     return render_template('puppy.html', name=name)
@@ -27,6 +37,11 @@ def puppy_name(name):
         return f"Hi, {name.capitalize()}! puppylatin name is {name.capitalize()}y"
     else:
         return f"Hi, {name.capitalize()}y! Your puppylatin name is {name[:-1].capitalize()}iful"
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
 
 if __name__ == "__main__":
     app.run(debug=True)
